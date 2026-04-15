@@ -1,9 +1,9 @@
 import { config, fields, singleton } from '@keystatic/core';
 
-const storage = process.env.NODE_ENV === 'production'
+const storage = import.meta.env.PROD
   ? {
       kind: 'github' as const,
-      repo: 'comONCreation/mediathera',
+      repo: import.meta.env.PUBLIC_KEYSTATIC_GITHUB_REPO as `${string}/${string}`,
     }
   : { kind: 'local' as const };
 

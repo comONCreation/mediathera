@@ -56,7 +56,7 @@ Dans **Vercel > Project > Settings > Environment Variables**, ajouter :
 | `KEYSTATIC_GITHUB_CLIENT_ID`     | Le Client ID de l'OAuth App GitHub           |
 | `KEYSTATIC_GITHUB_CLIENT_SECRET` | Le Client Secret de l'OAuth App GitHub       |
 | `KEYSTATIC_SECRET`               | Une chaîne aléatoire (voir commande ci-dessous) |
-| `KEYSTATIC_GITHUB_REPO`          | `owner/repo` (ex: `mon-user/mediathera`)     |
+| `PUBLIC_KEYSTATIC_GITHUB_REPO`   | `owner/repo` (ex: `mon-user/mediathera`)     |
 
 Pour générer `KEYSTATIC_SECRET` :
 
