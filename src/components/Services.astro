@@ -1,52 +1,29 @@
 ---
-const services = [
+import { reader } from '../lib/keystatic'
+
+const servicesData = await reader.singletons.services.read()
+
+const heading = servicesData?.heading || 'Les accompagnements'
+const items = servicesData?.items || []
+
+const serviceDesign = [
   {
-    title: 'Dream Machine',
-    description:
-      "Plongez dans une expérience unique de relaxation profonde grâce à la Dream Machine. Cette technologie innovante utilise des jeux de lumière pour induire un état de détente méditative, favorisant la créativité et le lâcher-prise.",
-    price: 'XX €',
-    duration: '45 min',
-    location: 'En cabinet',
     gradient: 'from-indigo-100 via-purple-50 to-blue-100',
     icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />`,
   },
   {
-    title: 'Méthode JMV',
-    description:
-      "La méthode JMV est une approche thérapeutique douce qui permet d'identifier et de traiter les déséquilibres du corps. Elle aide à résoudre allergies, intolérances et blocages émotionnels de manière naturelle.",
-    price: 'XX €',
-    duration: '1h',
-    location: 'En cabinet',
     gradient: 'from-emerald-100 via-green-50 to-teal-100',
     icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />`,
   },
   {
-    title: 'Art Thérapie',
-    description:
-      "L'art thérapie vous invite à explorer votre monde intérieur à travers la création artistique. Dessin, peinture, collage : autant de moyens d'expression pour libérer les émotions et favoriser la guérison.",
-    price: 'XX €',
-    duration: '1h30',
-    location: 'En cabinet & à domicile',
     gradient: 'from-rose-100 via-pink-50 to-orange-100',
     icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />`,
   },
   {
-    title: 'Séance psy',
-    description:
-      "Un espace d'écoute bienveillant et confidentiel pour explorer vos difficultés, comprendre vos schémas et trouver vos propres ressources. Approche intégrative adaptée à chaque situation unique.",
-    price: 'XX €',
-    duration: '1h',
-    location: 'En cabinet & en visio',
     gradient: 'from-sky-100 via-blue-50 to-cyan-100',
     icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M8.625 9.75a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 01.778-.332 48.294 48.294 0 005.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />`,
   },
   {
-    title: 'Ateliers',
-    description:
-      "Des ateliers collectifs thématiques pour explorer ensemble des sujets variés : gestion du stress, confiance en soi, créativité, développement personnel. Un moment de partage et de découverte en groupe.",
-    price: 'XX €',
-    duration: '2h',
-    location: 'En cabinet & en extérieur',
     gradient: 'from-amber-100 via-yellow-50 to-orange-100',
     icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />`,
   },
@@ -58,74 +35,81 @@ const services = [
     <div class="text-center">
       <p class="reveal text-sm font-semibold uppercase tracking-widest text-primary">Prestations</p>
       <h2 class="reveal mt-3 font-heading text-4xl text-stone-800 lg:text-5xl">
-        Les accompagnements
+        {heading}
       </h2>
       <div class="reveal mx-auto mt-4 h-px w-16 bg-primary/30"></div>
     </div>
 
     <!-- Service blocks (alternating) -->
     <div class="mt-20 space-y-24 lg:space-y-32">
-      {services.map((service, i) => (
-        <div
-          class={`grid items-center gap-10 md:grid-cols-2 md:gap-16 lg:gap-20 ${
-            i % 2 === 1 ? 'direction-rtl' : ''
-          }`}
-        >
-          <!-- Image placeholder -->
-          <div class={`${i % 2 === 1 ? 'reveal-right md:order-2' : 'reveal-left'}`}>
-            <div
-              class={`relative aspect-[4/3] overflow-hidden rounded-3xl bg-gradient-to-br ${service.gradient}`}
-            >
-              <div class="flex h-full w-full flex-col items-center justify-center gap-4 p-8">
-                <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-white/60 backdrop-blur">
-                  <svg
-                    class="h-8 w-8 text-stone-500"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    set:html={service.icon}
-                  />
-                </div>
-                <span class="text-sm font-medium text-stone-400">Image à ajouter</span>
+      {items.map((service, i) => {
+        const design = serviceDesign[i] || serviceDesign[0]
+        return (
+          <div
+            class={`grid items-center gap-10 md:grid-cols-2 md:gap-16 lg:gap-20 ${
+              i % 2 === 1 ? 'direction-rtl' : ''
+            }`}
+          >
+            <!-- Image -->
+            <div class={`${i % 2 === 1 ? 'reveal-right md:order-2' : 'reveal-left'}`}>
+              <div
+                class={`relative aspect-[4/3] overflow-hidden rounded-3xl bg-gradient-to-br ${design.gradient}`}
+              >
+                {service.image ? (
+                  <img src={service.image} alt={service.title} class="h-full w-full object-cover" />
+                ) : (
+                  <div class="flex h-full w-full flex-col items-center justify-center gap-4 p-8">
+                    <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-white/60 backdrop-blur">
+                      <svg
+                        class="h-8 w-8 text-stone-500"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        set:html={design.icon}
+                      />
+                    </div>
+                    <span class="text-sm font-medium text-stone-400">Image à ajouter</span>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            <!-- Content -->
+            <div class={`${i % 2 === 1 ? 'reveal-left md:order-1' : 'reveal-right'}`}>
+              <h3 class="font-heading text-3xl text-stone-800 lg:text-4xl">
+                {service.title}
+              </h3>
+              <p class="mt-5 text-base leading-relaxed text-stone-600 lg:text-lg">
+                {service.description}
+              </p>
+
+              <!-- Info badges -->
+              <div class="mt-6 flex flex-wrap gap-3">
+                <span class="inline-flex items-center gap-1.5 rounded-full bg-primary-50 px-4 py-2 text-sm font-medium text-primary-dark">
+                  <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  {service.duration}
+                </span>
+                <span class="inline-flex items-center gap-1.5 rounded-full bg-primary-50 px-4 py-2 text-sm font-medium text-primary-dark">
+                  <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
+                  </svg>
+                  {service.price}
+                </span>
+                <span class="inline-flex items-center gap-1.5 rounded-full bg-primary-50 px-4 py-2 text-sm font-medium text-primary-dark">
+                  <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                  </svg>
+                  {service.location}
+                </span>
               </div>
             </div>
           </div>
-
-          <!-- Content -->
-          <div class={`${i % 2 === 1 ? 'reveal-left md:order-1' : 'reveal-right'}`}>
-            <h3 class="font-heading text-3xl text-stone-800 lg:text-4xl">
-              {service.title}
-            </h3>
-            <p class="mt-5 text-base leading-relaxed text-stone-600 lg:text-lg">
-              {service.description}
-            </p>
-
-            <!-- Info badges -->
-            <div class="mt-6 flex flex-wrap gap-3">
-              <span class="inline-flex items-center gap-1.5 rounded-full bg-primary-50 px-4 py-2 text-sm font-medium text-primary-dark">
-                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                {service.duration}
-              </span>
-              <span class="inline-flex items-center gap-1.5 rounded-full bg-primary-50 px-4 py-2 text-sm font-medium text-primary-dark">
-                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
-                </svg>
-                {service.price}
-              </span>
-              <span class="inline-flex items-center gap-1.5 rounded-full bg-primary-50 px-4 py-2 text-sm font-medium text-primary-dark">
-                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                </svg>
-                {service.location}
-              </span>
-            </div>
-          </div>
-        </div>
-      ))}
+        )
+      })}
     </div>
   </div>
 </section>

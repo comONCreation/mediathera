@@ -1,0 +1,22 @@
+{
+  "heading": "À qui s'adresse Médiathéra",
+  "intro": "Que vous traversiez une période difficile, que vous souhaitiez mieux vous comprendre ou simplement prendre soin de vous, Médiathéra vous accueille avec bienveillance. Mes accompagnements s'adressent aux adultes, adolescents et enfants, que ce soit pour des problématiques émotionnelles, relationnelles, professionnelles ou simplement dans une démarche de développement personnel.",
+  "cards": [
+    {
+      "title": "Adultes",
+      "description": "Stress, anxiété, burn-out, transitions de vie, deuil, confiance en soi"
+    },
+    {
+      "title": "Couples & Familles",
+      "description": "Communication, conflits, parentalité, reconstruction relationnelle"
+    },
+    {
+      "title": "Adolescents",
+      "description": "Mal-être, harcèlement, orientation, troubles du comportement"
+    },
+    {
+      "title": "Enfants",
+      "description": "Émotions, sommeil, séparation, troubles de l'apprentissage"
+    }
+  ]
+}

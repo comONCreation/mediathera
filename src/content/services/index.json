@@ -1,0 +1,45 @@
+{
+  "heading": "Les accompagnements",
+  "items": [
+    {
+      "title": "Dream Machine",
+      "description": "Plongez dans une expérience unique de relaxation profonde grâce à la Dream Machine. Cette technologie innovante utilise des jeux de lumière pour induire un état de détente méditative, favorisant la créativité et le lâcher-prise.",
+      "price": "XX €",
+      "duration": "45 min",
+      "location": "En cabinet",
+      "image": null
+    },
+    {
+      "title": "Méthode JMV",
+      "description": "La méthode JMV est une approche thérapeutique douce qui permet d'identifier et de traiter les déséquilibres du corps. Elle aide à résoudre allergies, intolérances et blocages émotionnels de manière naturelle.",
+      "price": "XX €",
+      "duration": "1h",
+      "location": "En cabinet",
+      "image": null
+    },
+    {
+      "title": "Art Thérapie",
+      "description": "L'art thérapie vous invite à explorer votre monde intérieur à travers la création artistique. Dessin, peinture, collage : autant de moyens d'expression pour libérer les émotions et favoriser la guérison.",
+      "price": "XX €",
+      "duration": "1h30",
+      "location": "En cabinet & à domicile",
+      "image": null
+    },
+    {
+      "title": "Séance psy",
+      "description": "Un espace d'écoute bienveillant et confidentiel pour explorer vos difficultés, comprendre vos schémas et trouver vos propres ressources. Approche intégrative adaptée à chaque situation unique.",
+      "price": "XX €",
+      "duration": "1h",
+      "location": "En cabinet & en visio",
+      "image": null
+    },
+    {
+      "title": "Ateliers",
+      "description": "Des ateliers collectifs thématiques pour explorer ensemble des sujets variés : gestion du stress, confiance en soi, créativité, développement personnel. Un moment de partage et de découverte en groupe.",
+      "price": "XX €",
+      "duration": "2h",
+      "location": "En cabinet & en extérieur",
+      "image": null
+    }
+  ]
+}

@@ -1,15 +1,11 @@
 ---
 import '../styles/global.css'
+import { reader } from '../lib/keystatic'
 
-interface Props {
-  title?: string
-  description?: string
-}
+const site = await reader.singletons.site.read()
 
-const {
-  title = 'Médiathéra - Accompagnement psychologique & physiologique',
-  description = 'Médiathéra vous accompagne dans votre bien-être psychologique et physiologique. Dream Machine, Méthode JMV, Art Thérapie, Séances psy et Ateliers.',
-} = Astro.props
+const title = site?.metaTitle || 'Médiathéra'
+const description = site?.metaDescription || ''
 ---
 
 <!doctype html>
