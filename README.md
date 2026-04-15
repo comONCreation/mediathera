@@ -32,16 +32,20 @@ En production, Keystatic écrit directement dans le repo GitHub. Chaque sauvegar
 
 L'admin est accessible à `https://votre-domaine.fr/keystatic`.
 
-#### 1. Créer une GitHub OAuth App
+#### 1. Créer une GitHub App
 
-1. Aller sur **GitHub > Settings > Developer settings > OAuth Apps > New OAuth App**
+1. Aller sur **GitHub > Settings > Developer settings > GitHub Apps > New GitHub App**
 2. Remplir :
-   - **Application name** : `Mediathera CMS`
+   - **GitHub App name** : `Mediathera CMS`
    - **Homepage URL** : `https://votre-domaine.fr`
-   - **Authorization callback URL** : `https://votre-domaine.fr/api/keystatic/github/oauth/callback`
-3. Cliquer sur **Register application**
-4. Noter le **Client ID**
+   - **Callback URL** : `https://votre-domaine.fr/api/keystatic/github/oauth/callback`
+   - **Webhook** : décocher "Active"
+   - **Permissions** > Repository > **Contents** : Read & write
+   - **Where can this GitHub App be installed** : Only on this account
+3. Cliquer sur **Create GitHub App**
+4. Noter le **Client ID** (pas l'App ID)
 5. Cliquer sur **Generate a new client secret** et noter le **Client Secret**
+6. Dans le menu latéral, cliquer sur **Install App** et l'installer sur le repo du site
 
 #### 2. Configurer les variables d'environnement sur Vercel
 
