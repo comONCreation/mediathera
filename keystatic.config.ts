@@ -3,7 +3,7 @@ import { config, fields, singleton } from '@keystatic/core';
 const storage = process.env.NODE_ENV === 'production'
   ? {
       kind: 'github' as const,
-      repo: process.env.KEYSTATIC_GITHUB_REPO as `${string}/${string}`,
+      repo: 'comONCreation/mediathera',
     }
   : { kind: 'local' as const };
 
