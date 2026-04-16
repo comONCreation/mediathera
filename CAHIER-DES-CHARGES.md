@@ -9,9 +9,9 @@
 
 ## 1. Contexte et objectifs
 
-Émilie Combret est praticienne en bien-être mental. Elle propose des accompagnements psychologiques et physiologiques sous l'enseigne **Médiathéra**.
+Émilie Combret est praticienne en bien-être mental. Elle souhaite proposer des accompagnements psychologiques et physiologiques sous l'enseigne **Médiathéra**.
 
-Émilie a transmis des visuels réalisés sur Canva (flyers, publications réseaux sociaux) qui servent de référence graphique pour le site. Ces documents permettent d'extraire une **charte graphique** : palette de couleurs, typographies, ton visuel général. **Le respect de cette charte est un enjeu central du projet** : le site doit s'inscrire dans la continuité des supports de communication existants.
+La cliente a transmis des visuels réalisés sur Canva (flyers, publications réseaux sociaux) qui servent de référence graphique pour le site. Ces documents permettent d'extraire une **charte graphique** : palette de couleurs, typographies, ton visuel général. **Le respect de cette charte est un enjeu central du projet** : le site doit s'inscrire dans la continuité des supports de communication existants.
 
 L'objectif de ce projet est de réaliser un **site vitrine monopage (one page)** présentant :
 - L'identité et la philosophie de Médiathéra
@@ -59,11 +59,11 @@ Le site est organisé en **6 sections** accessibles par défilement vertical, av
 
 | # | Section                        | Contenu                                                                  |
 |---|--------------------------------|--------------------------------------------------------------------------|
-| 1 | **Hero (haut de page)**        | Nom, accroche, devise, boutons CTA (Calendly + téléphone)                |
+| 1 | **Hero (haut de page)**        | Nom, accroche, boutons CTA (Calendly + téléphone)                        |
 | 2 | **À propos**                   | Photo, présentation d'Émilie, approche thérapeutique                     |
 | 3 | **À qui s'adresse Médiathéra** | Court texte + cartes par profil (adultes, couples, adolescents, enfants) |
-| 4 | **Les accompagnements**        | Grille des 5 prestations avec description, durée, tarif, lieu, photo     |
-| 5 | **Contact**                    | Téléphone, email, CTA Calendly, carte Google Maps                        |
+| 4 | **Les accompagnements**        | Grille des 5 prestations avec description, durée, tarif, lieux, photo    |
+| 5 | **Contact**                    | Téléphone, email, réseaux sociaux, CTA Calendly, carte Google Maps       |
 | 6 | **Footer (bas de page)**       | Mentions légales, liens                                                  |
 
 ---
@@ -72,7 +72,7 @@ Le site est organisé en **6 sections** accessibles par défilement vertical, av
 
 ### Astro 6 - plutôt que WordPress
 
-Le site est développé avec **Astro**, un générateur de sites statiques moderne.
+Le site sera développé avec **Astro**, un générateur de sites statiques moderne.
 
 **Avantages par rapport à WordPress :**
 
@@ -85,13 +85,13 @@ Le site est développé avec **Astro**, un générateur de sites statiques moder
 | Performances SEO | Score Lighthouse élevé nativement | Nécessite des plugins (Yoast, etc.) |
 | Sur-mesure | Design 100% personnalisé | Dépend du thème choisi |
 
-**Limite principale d'Astro :** Moins de fonctionnalités "prêtes à l'emploi" qu'un WordPress (pas de plugin de formulaire en 3 clics). Pour un site vitrine statique, c'est un avantage net.
+**Limite principale d'Astro :** Moins de fonctionnalités "prêtes à l'emploi" qu'un WordPress (pas de plugin de formulaire ou système de blog en 3 clics).
 
 ---
 
 ### Keystatic - le CMS intégré
 
-**Keystatic** est un CMS headless léger qui s'intègre directement au projet. Il permet à Émilie de **modifier les textes du site depuis une interface web simple**, sans toucher au code.
+**Keystatic** est un CMS headless léger qui s'intègre directement au projet. Il permet à la cliente de **modifier les textes du site depuis une interface web simple**, sans toucher au code.
 
 **Avantages :**
 - Interface claire et intuitive, accessible depuis `/keystatic`
@@ -112,13 +112,13 @@ Le site est développé avec **Astro**, un générateur de sites statiques moder
 - **Tailwind CSS 4** - styles utilitaires, design cohérent
 - **Keystatic** - CMS pour l'édition des contenus
 - **Vercel + o2switch** - hébergement et déploiement continu
-- **Calendly** - prise de rendez-vous en ligne (service existant)
+- **Calendly** - prise de rendez-vous en ligne
 
 ---
 
 ## 5. Limites de la solution
 
-- **Pas de formulaire de contact natif** : la prise de RDV passe par Calendly. Si Émilie veut un formulaire email, cela nécessiterait un service tiers (Formspree, etc.) et est hors périmètre.
+- **Pas de formulaire de contact natif** : la prise de RDV passe par Calendly. Si la cliente veut un formulaire email, cela nécessiterait un service tiers (Formspree, etc.) et est hors périmètre.
 - **Pas de blog** : si Émilie souhaite publier des articles régulièrement, une évolution du projet serait à prévoir ultérieurement.
 - **CMS limité** : Keystatic permet de modifier les textes et de changer les images, mais pas de restructurer le site (ajouter une section, changer la mise en page). Toute évolution structurelle requiert l'intervention du développeur.
 
@@ -165,9 +165,9 @@ Le site est développé avec **Astro**, un générateur de sites statiques moder
 | **Numéro de téléphone** | ❌ Manquant | À transmettre                                    |
 | Adresse email | ✅ emiliecombret@mediathera.fr | Créée par le prestataire chez o2switch           |
 | **Lien Calendly** | ❌ Manquant | URL du compte Calendly de Médiathéra             |
-| Instagram | ✅ @mediathera_et_vous | Confirmé                                         |
 | **Adresse du cabinet** | ❌ Manquant | Obligatoire pour la carte Google Maps            |
 | **Horaires d'ouverture** | ❌ Optionnel | Si souhaité dans le footer ou la section contact |
+| Instagram | ✅ @mediathera_et_vous | Confirmé                                         |
 | **Facebook / LinkedIn** | ❌ Optionnel | À transmettre si ces comptes existent            |
 
 ---
@@ -202,9 +202,9 @@ La prestation comprend **un cycle de corrections** après la livraison du site c
 ## 10. Propriété et transfert
 
 À la livraison et après règlement complet :
-- Le code source est hébergé sur un dépôt GitHub partagé avec Émilie
-- Le nom de domaine est enregistré au nom d'Émilie Combret
-- Émilie dispose d'un accès complet à son hébergement o2switch
+- Le code source est hébergé sur un dépôt GitHub partagé avec la cliente
+- Le nom de domaine est (déjà) enregistré au nom d'Émilie Combret
+- La cliente dispose d'un accès complet à son hébergement o2switch
 
 ---
 
