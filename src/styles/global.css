@@ -7,13 +7,11 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-  /*size-adjust: 160%;
-  ascent-override: 125%;*/
 }
 
 /* ─── Tailwind CSS 4 Theme ─── */
 @theme {
-  --color-primary: #e0982f;
+  --color-primary: #E0992F;
   --color-primary-dark: #c4841f;
   --color-primary-light: #f5d5a0;
   --color-primary-50: #fef9f0;
