@@ -26,7 +26,7 @@ Custom theme values are defined in `src/styles/global.css` using the `@theme` di
 
 ### Fonts
 
-- **Headings**: "Storytelling" custom font loaded via `@font-face` from `public/fonts/`. Fallback: Young Serif (Google Fonts).
+- **Headings**: "Mistrully" custom font loaded via `@font-face` from `public/fonts/`. Fallback: Young Serif (Google Fonts).
 - **Body**: Plus Jakarta Sans (Google Fonts), loaded in `Layout.astro`.
 
 ### Key conventions

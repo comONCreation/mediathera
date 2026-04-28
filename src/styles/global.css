@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
-/* ─── Storytelling Font (ajouter les fichiers dans public/fonts/) ─── */
+/* ─── Mistrully Font (ajouter les fichiers dans public/fonts/) ─── */
 @font-face {
-  font-family: 'Storytelling';
-  src: url('/fonts/storytelling2.ttf') format('truetype');
+  font-family: 'Mistrully';
+  src: url('/fonts/Mistrully.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -21,7 +21,7 @@
   --color-cream: #FFFBF5;
   --color-cream-dark: #f5efe5;
 
-  --font-heading: 'Storytelling', 'Young Serif', Georgia, serif;
+  --font-heading: 'Mistrully', 'Young Serif', Georgia, serif;
   --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
 
   --animate-fade-up: fade-up 0.7s ease-out both;
