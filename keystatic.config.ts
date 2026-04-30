@@ -102,6 +102,10 @@ export default config({
             price: fields.text({ label: 'Tarif', description: 'Ex: 60 €' }),
             duration: fields.text({ label: 'Durée', description: 'Ex: 45 min' }),
             location: fields.text({ label: 'Lieu', description: 'Ex: En cabinet' }),
+            packageOffer: fields.text({
+              label: 'Forfait (optionnel)',
+              description: 'Ex: Forfait 5 séances : 280 €',
+            }),
             image: fields.image({
               label: 'Image',
               directory: 'src/assets/images/services',
