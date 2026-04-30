@@ -1,0 +1,53 @@
+---
+interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+---
+
+<div data-modal-root class="contents">
+  <slot name="trigger" />
+
+  <dialog
+    data-modal-dialog
+    class="m-auto w-full max-w-2xl rounded-lg bg-cream p-0 text-stone-800 shadow-xl backdrop:bg-stone-950/70 backdrop:backdrop-blur-sm"
+  >
+    <div class="flex items-center justify-between border-b border-stone-200 px-6 py-4">
+      <h2 class="font-heading text-2xl text-primary">{title}</h2>
+      <button
+        type="button"
+        data-modal-close
+        aria-label="Fermer"
+        class="cursor-pointer rounded-full p-2 text-stone-500 transition hover:bg-stone-100 hover:text-stone-800"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="max-h-[70vh] overflow-y-auto px-6 py-5 text-sm leading-relaxed">
+      <slot />
+    </div>
+  </dialog>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-modal-root]').forEach((root) => {
+    const dialog = root.querySelector<HTMLDialogElement>('[data-modal-dialog]')
+    if (!dialog) return
+
+    root.querySelectorAll<HTMLElement>('[data-modal-trigger]').forEach((trigger) => {
+      trigger.addEventListener('click', () => dialog.showModal())
+    })
+
+    dialog.querySelector<HTMLButtonElement>('[data-modal-close]')?.addEventListener('click', () => {
+      dialog.close()
+    })
+
+    dialog.addEventListener('click', (event) => {
+      if (event.target === dialog) dialog.close()
+    })
+  })
+</script>

@@ -1,8 +1,10 @@
 ---
 import { reader } from '../lib/keystatic'
+import Modal from './ui/Modal.astro'
 
 const site = await reader.singletons.site.read()
 const name = site?.name || 'Médiathéra'
+const legalNotice = site?.legalNotice || ''
 const year = new Date().getFullYear()
 ---
 
@@ -14,8 +16,16 @@ const year = new Date().getFullYear()
     <p class="text-sm text-stone-500">
       &copy; {year} {name} - Tous droits réservés
     </p>
-    <a href="#" class="text-sm text-stone-500 transition hover:text-stone-300">
-      Mentions légales
-    </a>
+    <Modal title="Mentions légales">
+      <button
+        slot="trigger"
+        type="button"
+        data-modal-trigger
+        class="cursor-pointer text-sm text-stone-500 transition hover:text-stone-300"
+      >
+        Mentions légales
+      </button>
+      <div class="whitespace-pre-wrap">{legalNotice || 'Mentions légales à compléter.'}</div>
+    </Modal>
   </div>
 </footer>

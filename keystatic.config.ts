@@ -29,6 +29,11 @@ export default config({
           label: 'Description SEO (balise meta)',
           multiline: true,
         }),
+        legalNotice: fields.text({
+          label: 'Mentions légales',
+          multiline: true,
+          description: 'Affichées dans une modale depuis le pied de page.',
+        }),
       },
     }),
 
