@@ -1,5 +1,6 @@
 ---
 import { reader } from '../lib/keystatic'
+import ButtonCTA from './ui/ButtonCTA.astro'
 
 const site = await reader.singletons.site.read()
 const contactData = await reader.singletons.contact.read()
@@ -113,18 +114,7 @@ const ctaText = hero?.ctaText || 'Prendre rendez-vous'
         )}
 
         <!-- CTA -->
-        <a
-          href={calendlyUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="group mt-10 inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 font-semibold text-stone-900
-                 shadow-xl shadow-primary/20 transition-all duration-300 hover:bg-primary-dark hover:-translate-y-0.5"
-        >
-          {ctaText}
-          <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-          </svg>
-        </a>
+        <ButtonCTA href={calendlyUrl} label={ctaText} class="mt-10" />
       </div>
 
       <!-- Map -->
