@@ -1,20 +1,29 @@
-# Mediathera
+# Médiathéra
 
-Site vitrine one-page pour un cabinet de psychologie & physiothérapie, construit avec Astro 6, React 19 et Tailwind CSS 4. Le contenu est géré via Keystatic CMS.
+Site vitrine one-page de **Médiathéra**, cabinet d'**Émilie Combret**, praticienne psycho-sociale et art-thérapeute. Le site présente son parcours et ses accompagnements (séances thérapeutiques, art-thérapie, Dream Machine, Méthode JMV, ateliers) autour du bien-être psychologique et physiologique. Construit avec Astro 6, React 19 et Tailwind CSS 4 ; contenu géré via Keystatic CMS.
 
 ## Prérequis
 
-- Node.js >= 22.12.0
+- Node.js 24.x
 - npm
+
+## Stack technique
+
+- **Astro 6** : `output: 'server'` avec prerender sélectif (la home page est prerenderée, l'admin Keystatic est SSR)
+- **React 19** : Composants interactifs + admin Keystatic
+- **Tailwind CSS 4** : Styles utilitaires (thème dans `src/styles/global.css` via `@theme`)
+- **Keystatic** : CMS Git-based (admin à `/keystatic`)
+- **Vercel** : Hébergement via l'adapter `@astrojs/vercel` (Web Analytics activé)
 
 ## Commandes
 
-| Commande         | Action                                     |
-| :--------------- | :----------------------------------------- |
-| `npm install`    | Installer les dépendances                  |
-| `npm run dev`    | Lancer le serveur de dev (`localhost:4321`) |
-| `npm run build`  | Build de production dans `./dist/`         |
-| `npm run preview`| Prévisualiser le build localement          |
+| Commande          | Action                                          |
+| :---------------- | :---------------------------------------------- |
+| `npm install`     | Installer les dépendances                       |
+| `npm run dev`     | Lancer le serveur de dev (`localhost:4321`)     |
+| `npm run build`   | Build de production dans `./dist/`              |
+| `npm run preview` | Prévisualiser le build localement               |
+| `npm run check`   | Vérification TypeScript / Astro (`astro check`) |
 
 ## Gestion du contenu avec Keystatic
 
@@ -87,11 +96,3 @@ Le contenu est organisé en 6 sections éditables :
 | Pour qui             | `src/content/forwho/index.json`  | Titre, intro, cartes publics cibles                 |
 | Prestations          | `src/content/services/index.json`| Titre, liste des prestations (tarif, durée, image)  |
 | Contact              | `src/content/contact/index.json` | Titre, URL Google Maps                              |
-
-## Stack technique
-
-- **Astro 6** - Framework web statique avec SSR partiel
-- **React 19** - Composants interactifs + admin Keystatic
-- **Tailwind CSS 4** - Styles utilitaires (thème dans `src/styles/global.css`)
-- **Keystatic** - CMS Git-based (admin à `/keystatic`)
-- **Vercel** - Hébergement avec adapter `@astrojs/vercel`
