@@ -57,8 +57,8 @@ export default config({
         }),
         photo: fields.image({
           label: 'Photo de profil',
-          directory: 'public/images/about',
-          publicPath: '/images/about/',
+          directory: 'src/assets/images/about',
+          publicPath: '/src/assets/images/about/',
         }),
       },
     }),
@@ -104,8 +104,8 @@ export default config({
             location: fields.text({ label: 'Lieu', description: 'Ex: En cabinet' }),
             image: fields.image({
               label: 'Image',
-              directory: 'public/images/services',
-              publicPath: '/images/services/',
+              directory: 'src/assets/images/services',
+              publicPath: '/src/assets/images/services/',
             }),
           }),
           {

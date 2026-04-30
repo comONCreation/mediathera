@@ -2,44 +2,42 @@
   "heading": "Les accompagnements",
   "items": [
     {
-      "title": "Dream Machine",
-      "description": "Plongez dans une expérience unique de relaxation profonde grâce à la Dream Machine. Cette technologie innovante utilise des jeux de lumière pour induire un état de détente méditative, favorisant la créativité et le lâcher-prise.",
-      "price": "XX €",
-      "duration": "45 min",
-      "location": "En cabinet",
-      "image": null
-    },
-    {
-      "title": "Méthode JMV",
-      "description": "La méthode JMV est une approche thérapeutique douce qui permet d'identifier et de traiter les déséquilibres du corps. Elle aide à résoudre allergies, intolérances et blocages émotionnels de manière naturelle.",
-      "price": "XX €",
-      "duration": "1h",
-      "location": "En cabinet",
-      "image": null
+      "title": "Séance thérapeutique",
+      "description": "Un espace d’écoute, de parole et de soutien pour traverser des périodes difficiles, retrouver des repères, mieux comprendre ses émotions et avancer à son rythme dans un cadre humain, bienveillant et sans jugement.",
+      "price": "55 €",
+      "duration": "1 h",
+      "location": "En cabinet et à domicile",
+      "image": "/src/assets/images/services/items/0/image.jpeg"
     },
     {
       "title": "Art Thérapie",
-      "description": "L'art thérapie vous invite à explorer votre monde intérieur à travers la création artistique. Dessin, peinture, collage : autant de moyens d'expression pour libérer les émotions et favoriser la guérison.",
-      "price": "XX €",
-      "duration": "1h30",
-      "location": "En cabinet & à domicile",
-      "image": null
+      "description": "Un accompagnement thérapeutique utilisant principalement la voix, le chant, l’expression et le jeu comme supports de communication et de libération émotionnelle. Chez l’enfant comme chez l’adulte, ces médiations permettent d’exprimer autrement ce qui peut être difficile à verbaliser, tout en favorisant confiance, créativité et mieux-être.",
+      "price": "45 €",
+      "duration": "45 min",
+      "location": "En cabinet et à domicile",
+      "image": "/src/assets/images/services/items/1/image.jpeg"
     },
     {
-      "title": "Séance psy",
-      "description": "Un espace d'écoute bienveillant et confidentiel pour explorer vos difficultés, comprendre vos schémas et trouver vos propres ressources. Approche intégrative adaptée à chaque situation unique.",
-      "price": "XX €",
-      "duration": "1h",
-      "location": "En cabinet & en visio",
-      "image": null
+      "title": "Dream Machine",
+      "description": "Une expérience immersive de relaxation profonde mêlant lumière rythmique et détente sensorielle. La Dream Machine favorise l’apaisement mental, le lâcher-prise, la créativité et la reconnexion à soi dans un cadre sécurisant et accompagné. Forfait 5 séances : 280 €",
+      "price": "30 € à 60 €",
+      "duration": "30 min à 1 h",
+      "location": "En cabinet",
+      "image": "/src/assets/images/services/items/2/image.jpeg"
+    },
+    {
+      "title": "Méthode JMV",
+      "description": "Une approche globale prenant en compte les dimensions psychologiques, émotionnelles et physiologiques de la personne. La méthode JMV peut accompagner différentes problématiques comme le stress, certaines addictions, la gestion du poids, les phobies ,les intolérances ou certains déséquilibres du quotidien, dans une démarche personnalisée et respectueuse du fonctionnement de chacun.",
+      "price": "80 €",
+      "duration": "1 h 15",
+      "location": "En cabinet et à domicile",
+      "image": "/src/assets/images/services/items/3/image.jpeg"
     },
     {
       "title": "Ateliers",
       "description": "Des ateliers collectifs thématiques pour explorer ensemble des sujets variés : gestion du stress, confiance en soi, créativité, développement personnel. Un moment de partage et de découverte en groupe.",
-      "price": "XX €",
-      "duration": "2h",
-      "location": "En cabinet & en extérieur",
-      "image": null
+      "location": "En cabinet et en extérieur",
+      "image": "/src/assets/images/services/items/4/image.jpeg"
     }
   ]
 }
