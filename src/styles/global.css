@@ -65,6 +65,11 @@ body {
   scroll-margin-top: 5rem;
 }
 
+html,
+body {
+  overflow-x: clip;
+}
+
 /* ─── Scroll-triggered reveals ─── */
 .reveal {
   opacity: 0;
