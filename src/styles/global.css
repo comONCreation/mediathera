@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import '@fontsource-variable/plus-jakarta-sans/wght.css';
 
 /* ─── Mistrully Font (ajouter les fichiers dans public/fonts/) ─── */
 @font-face {
@@ -19,8 +20,8 @@
   --color-cream: #FFFBF5;
   --color-cream-dark: #f5efe5;
 
-  --font-heading: 'Mistrully', 'Young Serif', Georgia, serif;
-  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-heading: 'Mistrully', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans Variable', system-ui, sans-serif;
 
   --animate-fade-up: fade-up 0.7s ease-out both;
   --animate-fade-in: fade-in 0.8s ease-out both;
