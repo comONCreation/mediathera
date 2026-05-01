@@ -16,9 +16,8 @@ const sizeClasses = {
 ---
 
 <a
-  href={href}
-  target="_blank"
-  rel="noopener noreferrer"
+  href="#"
+  onclick={`Calendly.initPopupWidget({url: '${href}'});return false;`}
   class:list={[
     'group inline-flex items-center gap-2 rounded-full bg-primary font-semibold text-stone-900 transition-all duration-300 hover:bg-primary-dark',
     sizeClasses[size],
