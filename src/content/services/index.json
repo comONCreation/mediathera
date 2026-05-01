@@ -6,7 +6,7 @@
       "description": "Un espace d’écoute, de parole et de soutien pour traverser des périodes difficiles, retrouver des repères, mieux comprendre ses émotions et avancer à son rythme dans un cadre humain, bienveillant et sans jugement.",
       "price": "55 €",
       "duration": "1 h",
-      "location": "En cabinet et à domicile",
+      "location": "Cabinet, domicile et structures",
       "image": "/src/assets/images/services/items/0/image.jpeg"
     },
     {
@@ -14,7 +14,7 @@
       "description": "Un accompagnement thérapeutique utilisant principalement la voix, le chant, l’expression et le jeu comme supports de communication et de libération émotionnelle. Chez l’enfant comme chez l’adulte, ces médiations permettent d’exprimer autrement ce qui peut être difficile à verbaliser, tout en favorisant confiance, créativité et mieux-être.",
       "price": "45 €",
       "duration": "45 min",
-      "location": "En cabinet et à domicile",
+      "location": "Cabinet, domicile et structures",
       "image": "/src/assets/images/services/items/1/image.jpeg"
     },
     {
@@ -37,7 +37,7 @@
     {
       "title": "Ateliers",
       "description": "Des ateliers collectifs thématiques pour explorer ensemble des sujets variés : gestion du stress, confiance en soi, créativité, développement personnel. Un moment de partage et de découverte en groupe.",
-      "location": "En cabinet et en extérieur",
+      "location": "Cabinet, domicile et structures",
       "image": "/src/assets/images/services/items/4/image.jpeg"
     }
   ]
